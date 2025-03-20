@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ArrowDown, ArrowUp, DollarSign, Users, ShoppingCart, CreditCard } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 

@@ -1,8 +1,7 @@
-
 import React from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlusCircle, Package, FileText, Building, Download, Upload } from 'lucide-react';
 
 const Purchases: React.FC = () => {
