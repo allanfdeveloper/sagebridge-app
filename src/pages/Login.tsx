@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { EyeIcon, EyeOffIcon } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Login: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -10,6 +11,7 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const isMobile = useIsMobile();
   
   const navigate = useNavigate();
   
@@ -32,7 +34,7 @@ const Login: React.FC = () => {
   };
   
   return (
-    <div className="min-h-screen bg-sage-lightGray flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-sage-lightGray flex flex-col justify-center py-6 sm:py-12 px-4 sm:px-6 lg:px-8">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -44,7 +46,7 @@ const Login: React.FC = () => {
             <span className="text-white font-bold text-xl">S</span>
           </div>
         </div>
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">SageBridge</h2>
+        <h2 className="mt-6 text-center text-2xl sm:text-3xl font-extrabold text-gray-900">SageBridge</h2>
         <p className="mt-2 text-center text-sm text-gray-600">
           Accounting software powered by ERPNext
         </p>
@@ -54,10 +56,10 @@ const Login: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="mt-8 sm:mx-auto sm:w-full sm:max-w-md"
+        className="mt-6 sm:mt-8 sm:mx-auto sm:w-full sm:max-w-md"
       >
-        <div className="bg-white py-8 px-4 shadow-card sm:rounded-lg sm:px-10">
-          <form className="space-y-6" onSubmit={handleLogin}>
+        <div className="bg-white py-6 sm:py-8 px-4 shadow-card sm:rounded-lg sm:px-10">
+          <form className="space-y-5 sm:space-y-6" onSubmit={handleLogin}>
             {error && (
               <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md text-sm">
                 {error}
@@ -77,7 +79,7 @@ const Login: React.FC = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-sage-blue focus:border-sage-blue sm:text-sm"
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-sage-blue focus:border-sage-blue text-sm"
                   placeholder="you@example.com"
                 />
               </div>
@@ -96,7 +98,7 @@ const Login: React.FC = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-sage-blue focus:border-sage-blue sm:text-sm"
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-sage-blue focus:border-sage-blue text-sm"
                   placeholder="••••••••"
                 />
                 <button
@@ -109,7 +111,7 @@ const Login: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className={`flex items-center ${isMobile ? 'flex-col space-y-3' : 'justify-between'}`}>
               <div className="flex items-center">
                 <input
                   id="remember-me"
@@ -146,7 +148,7 @@ const Login: React.FC = () => {
             </div>
           </form>
 
-          <div className="mt-6">
+          <div className="mt-5 sm:mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300"></div>
@@ -156,7 +158,7 @@ const Login: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-3">
+            <div className="mt-5 sm:mt-6 grid grid-cols-2 gap-3">
               <div>
                 <a
                   href="#"
@@ -194,18 +196,18 @@ const Login: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="mt-6 sm:mx-auto sm:w-full sm:max-w-md"
+        className="mt-4 sm:mt-6 sm:mx-auto sm:w-full sm:max-w-md"
       >
-        <div className="bg-sage-lightBlue bg-opacity-70 py-4 px-6 rounded-md shadow-sm border border-sage-blue border-opacity-20">
-          <h3 className="text-center text-sm font-medium text-sage-darkBlue mb-2">Demo Credentials</h3>
-          <div className="grid grid-cols-2 gap-2 text-sm">
+        <div className="bg-sage-lightBlue bg-opacity-70 py-3 sm:py-4 px-4 sm:px-6 rounded-md shadow-sm border border-sage-blue border-opacity-20">
+          <h3 className="text-center text-xs sm:text-sm font-medium text-sage-darkBlue mb-2">Demo Credentials</h3>
+          <div className={`${isMobile ? 'flex flex-col space-y-2' : 'grid grid-cols-2 gap-2'} text-sm`}>
             <div className="bg-white px-3 py-2 rounded">
               <span className="block text-xs text-gray-500">Email</span>
-              <span className="font-medium text-sage-darkBlue">demo@sagebridge.com</span>
+              <span className="font-medium text-sage-darkBlue text-xs sm:text-sm">demo@sagebridge.com</span>
             </div>
             <div className="bg-white px-3 py-2 rounded">
               <span className="block text-xs text-gray-500">Password</span>
-              <span className="font-medium text-sage-darkBlue">demo123456</span>
+              <span className="font-medium text-sage-darkBlue text-xs sm:text-sm">demo123456</span>
             </div>
           </div>
           <p className="text-xs text-center mt-2 text-gray-600">Use these credentials to explore the demo application</p>
