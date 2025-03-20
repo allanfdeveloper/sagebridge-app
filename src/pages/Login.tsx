@@ -188,6 +188,29 @@ const Login: React.FC = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* Demo login credentials */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="mt-6 sm:mx-auto sm:w-full sm:max-w-md"
+      >
+        <div className="bg-sage-lightBlue bg-opacity-70 py-4 px-6 rounded-md shadow-sm border border-sage-blue border-opacity-20">
+          <h3 className="text-center text-sm font-medium text-sage-darkBlue mb-2">Demo Credentials</h3>
+          <div className="grid grid-cols-2 gap-2 text-sm">
+            <div className="bg-white px-3 py-2 rounded">
+              <span className="block text-xs text-gray-500">Email</span>
+              <span className="font-medium text-sage-darkBlue">demo@sagebridge.com</span>
+            </div>
+            <div className="bg-white px-3 py-2 rounded">
+              <span className="block text-xs text-gray-500">Password</span>
+              <span className="font-medium text-sage-darkBlue">demo123456</span>
+            </div>
+          </div>
+          <p className="text-xs text-center mt-2 text-gray-600">Use these credentials to explore the demo application</p>
+        </div>
+      </motion.div>
     </div>
   );
 };
