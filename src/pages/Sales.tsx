@@ -8,11 +8,11 @@ import { PlusCircle, FilePlus, Users, ListFilter, Download, Upload } from 'lucid
 const Sales: React.FC = () => {
   // Sample invoices data
   const invoices = [
-    { id: 'INV-001', customer: 'Acme Corp', date: '2023-05-28', amount: '$3,450.00', status: 'Paid' },
-    { id: 'INV-002', customer: 'Globex Inc', date: '2023-05-25', amount: '$1,200.00', status: 'Pending' },
-    { id: 'INV-003', customer: 'Stark Industries', date: '2023-05-20', amount: '$4,780.00', status: 'Paid' },
-    { id: 'INV-004', customer: 'Wayne Enterprises', date: '2023-05-18', amount: '$2,340.00', status: 'Overdue' },
-    { id: 'INV-005', customer: 'Umbrella Corp', date: '2023-05-15', amount: '$900.00', status: 'Paid' }
+    { id: 'INV-001', customer: 'Acme Corp', date: '2023-05-28', amount: 'R3,450.00', status: 'Paid' },
+    { id: 'INV-002', customer: 'Globex Inc', date: '2023-05-25', amount: 'R1,200.00', status: 'Pending' },
+    { id: 'INV-003', customer: 'Stark Industries', date: '2023-05-20', amount: 'R4,780.00', status: 'Paid' },
+    { id: 'INV-004', customer: 'Wayne Enterprises', date: '2023-05-18', amount: 'R2,340.00', status: 'Overdue' },
+    { id: 'INV-005', customer: 'Umbrella Corp', date: '2023-05-15', amount: 'R900.00', status: 'Paid' }
   ];
 
   return (

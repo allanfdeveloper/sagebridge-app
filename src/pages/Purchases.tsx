@@ -7,11 +7,11 @@ import { PlusCircle, Package, FileText, Building, Download, Upload } from 'lucid
 const Purchases: React.FC = () => {
   // Sample bills data
   const bills = [
-    { id: 'BILL-001', vendor: 'Office Supplies Ltd', date: '2023-05-28', amount: '$450.00', status: 'Paid' },
-    { id: 'BILL-002', vendor: 'Server Hosting Inc', date: '2023-05-25', amount: '$1,200.00', status: 'Pending' },
-    { id: 'BILL-003', vendor: 'Marketing Agency Co', date: '2023-06-10', amount: '$2,780.00', status: 'Upcoming' },
-    { id: 'BILL-004', vendor: 'Utility Services', date: '2023-05-18', amount: '$340.00', status: 'Paid' },
-    { id: 'BILL-005', vendor: 'Travel Expenses', date: '2023-05-15', amount: '$900.00', status: 'Pending' }
+    { id: 'BILL-001', vendor: 'Office Supplies Ltd', date: '2023-05-28', amount: 'R450.00', status: 'Paid' },
+    { id: 'BILL-002', vendor: 'Server Hosting Inc', date: '2023-05-25', amount: 'R1,200.00', status: 'Pending' },
+    { id: 'BILL-003', vendor: 'Marketing Agency Co', date: '2023-06-10', amount: 'R2,780.00', status: 'Upcoming' },
+    { id: 'BILL-004', vendor: 'Utility Services', date: '2023-05-18', amount: 'R340.00', status: 'Paid' },
+    { id: 'BILL-005', vendor: 'Travel Expenses', date: '2023-05-15', amount: 'R900.00', status: 'Pending' }
   ];
 
   return (
@@ -67,23 +67,23 @@ const Purchases: React.FC = () => {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center text-sm">
                     <span>Office Supplies</span>
-                    <span className="text-muted-foreground">$2,450</span>
+                    <span className="text-muted-foreground">R2,450</span>
                   </div>
                   <div className="flex justify-between items-center text-sm">
                     <span>Software & IT</span>
-                    <span className="text-muted-foreground">$3,870</span>
+                    <span className="text-muted-foreground">R3,870</span>
                   </div>
                   <div className="flex justify-between items-center text-sm">
                     <span>Marketing</span>
-                    <span className="text-muted-foreground">$5,340</span>
+                    <span className="text-muted-foreground">R5,340</span>
                   </div>
                   <div className="flex justify-between items-center text-sm">
                     <span>Travel</span>
-                    <span className="text-muted-foreground">$1,230</span>
+                    <span className="text-muted-foreground">R1,230</span>
                   </div>
                   <div className="flex justify-between items-center text-sm">
                     <span>Utilities</span>
-                    <span className="text-muted-foreground">$890</span>
+                    <span className="text-muted-foreground">R890</span>
                   </div>
                 </div>
               </div>
@@ -169,7 +169,7 @@ const Purchases: React.FC = () => {
                         <h4 className="font-medium">Office Supplies</h4>
                         <p className="text-sm text-muted-foreground mt-1">May 28, 2023</p>
                       </div>
-                      <span className="font-medium">$125.00</span>
+                      <span className="font-medium">R125.00</span>
                     </div>
                     <p className="text-sm mt-3">New printer cartridges and paper</p>
                     <div className="mt-3 flex items-center text-xs text-muted-foreground">
@@ -184,7 +184,7 @@ const Purchases: React.FC = () => {
                         <h4 className="font-medium">Software Subscription</h4>
                         <p className="text-sm text-muted-foreground mt-1">May 25, 2023</p>
                       </div>
-                      <span className="font-medium">$49.99</span>
+                      <span className="font-medium">R49.99</span>
                     </div>
                     <p className="text-sm mt-3">Monthly design software subscription</p>
                     <div className="mt-3 flex items-center text-xs text-muted-foreground">
@@ -199,7 +199,7 @@ const Purchases: React.FC = () => {
                         <h4 className="font-medium">Business Lunch</h4>
                         <p className="text-sm text-muted-foreground mt-1">May 22, 2023</p>
                       </div>
-                      <span className="font-medium">$78.50</span>
+                      <span className="font-medium">R78.50</span>
                     </div>
                     <p className="text-sm mt-3">Client meeting lunch expense</p>
                     <div className="mt-3 flex items-center text-xs text-muted-foreground">

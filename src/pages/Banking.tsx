@@ -8,19 +8,19 @@ import { PlusCircle, Link2, CreditCard, ArrowDownUp, Filter, Download } from 'lu
 const Banking: React.FC = () => {
   // Sample data for the bank accounts
   const accounts = [
-    { id: 1, name: 'Business Checking', bank: 'Chase Bank', balance: '$24,567.89', accountNumber: '•••• 5678', type: 'checking' },
-    { id: 2, name: 'Business Savings', bank: 'Chase Bank', balance: '$42,123.45', accountNumber: '•••• 9012', type: 'savings' },
-    { id: 3, name: 'Payroll Account', bank: 'Bank of America', balance: '$18,765.23', accountNumber: '•••• 3456', type: 'checking' }
+    { id: 1, name: 'Business Checking', bank: 'Chase Bank', balance: 'R24,567.89', accountNumber: '•••• 5678', type: 'checking' },
+    { id: 2, name: 'Business Savings', bank: 'Chase Bank', balance: 'R42,123.45', accountNumber: '•••• 9012', type: 'savings' },
+    { id: 3, name: 'Payroll Account', bank: 'Bank of America', balance: 'R18,765.23', accountNumber: '•••• 3456', type: 'checking' }
   ];
   
   // Sample data for transactions
   const transactions = [
-    { id: 1, date: '2023-06-01', description: 'Client Payment - ABC Corp', category: 'Income', amount: '+$5,000.00', account: 'Business Checking' },
-    { id: 2, date: '2023-05-30', description: 'Office Rent', category: 'Rent', amount: '-$2,500.00', account: 'Business Checking' },
-    { id: 3, date: '2023-05-28', description: 'Software Subscription', category: 'Software', amount: '-$99.99', account: 'Business Checking' },
-    { id: 4, date: '2023-05-25', description: 'Client Payment - XYZ Inc', category: 'Income', amount: '+$3,450.00', account: 'Business Checking' },
-    { id: 5, date: '2023-05-20', description: 'Transfer to Savings', category: 'Transfer', amount: '-$1,000.00', account: 'Business Checking' },
-    { id: 6, date: '2023-05-20', description: 'Transfer from Checking', category: 'Transfer', amount: '+$1,000.00', account: 'Business Savings' }
+    { id: 1, date: '2023-06-01', description: 'Client Payment - ABC Corp', category: 'Income', amount: '+R5,000.00', account: 'Business Checking' },
+    { id: 2, date: '2023-05-30', description: 'Office Rent', category: 'Rent', amount: '-R2,500.00', account: 'Business Checking' },
+    { id: 3, date: '2023-05-28', description: 'Software Subscription', category: 'Software', amount: '-R99.99', account: 'Business Checking' },
+    { id: 4, date: '2023-05-25', description: 'Client Payment - XYZ Inc', category: 'Income', amount: '+R3,450.00', account: 'Business Checking' },
+    { id: 5, date: '2023-05-20', description: 'Transfer to Savings', category: 'Transfer', amount: '-R1,000.00', account: 'Business Checking' },
+    { id: 6, date: '2023-05-20', description: 'Transfer from Checking', category: 'Transfer', amount: '+R1,000.00', account: 'Business Savings' }
   ];
   
   // Sample data for the chart
@@ -96,9 +96,9 @@ const Banking: React.FC = () => {
                 >
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f2f2f2" />
                   <XAxis dataKey="date" />
-                  <YAxis tickFormatter={(value) => `$${value / 1000}k`} />
+                  <YAxis tickFormatter={(value) => `R${value / 1000}k`} />
                   <Tooltip 
-                    formatter={(value) => [`$${value.toLocaleString()}`, undefined]}
+                    formatter={(value) => [`R${value.toLocaleString()}`, undefined]}
                     contentStyle={{ 
                       backgroundColor: 'white', 
                       border: 'none',
@@ -228,15 +228,15 @@ const Banking: React.FC = () => {
                 
                 <div className="flex justify-between text-sm mb-2">
                   <span className="text-muted-foreground">Statement Balance:</span>
-                  <span className="font-medium">$24,567.89</span>
+                  <span className="font-medium">R24,567.89</span>
                 </div>
                 <div className="flex justify-between text-sm mb-2">
                   <span className="text-muted-foreground">Book Balance:</span>
-                  <span className="font-medium">$24,378.45</span>
+                  <span className="font-medium">R24,378.45</span>
                 </div>
                 <div className="flex justify-between text-sm pt-2 border-t border-sage-lightGray">
                   <span className="font-medium">Difference:</span>
-                  <span className="font-medium text-amber-600">$189.44</span>
+                  <span className="font-medium text-amber-600">R189.44</span>
                 </div>
               </div>
               
@@ -259,7 +259,7 @@ const Banking: React.FC = () => {
                       <p className="font-medium text-sm">Amazon Business</p>
                       <p className="text-xs text-muted-foreground">May 28, 2023</p>
                     </div>
-                    <p className="font-medium text-red-600">-$127.84</p>
+                    <p className="font-medium text-red-600">-R127.84</p>
                   </div>
                   <div className="mt-2 flex justify-end">
                     <button className="text-primary-500 hover:text-primary-600 text-sm mr-2">Categorize</button>
@@ -273,7 +273,7 @@ const Banking: React.FC = () => {
                       <p className="font-medium text-sm">Transfer Deposit</p>
                       <p className="text-xs text-muted-foreground">May 25, 2023</p>
                     </div>
-                    <p className="font-medium text-green-600">+$2,500.00</p>
+                    <p className="font-medium text-green-600">+R2,500.00</p>
                   </div>
                   <div className="mt-2 flex justify-end">
                     <button className="text-primary-500 hover:text-primary-600 text-sm mr-2">Categorize</button>
@@ -287,7 +287,7 @@ const Banking: React.FC = () => {
                       <p className="font-medium text-sm">Staples Office Supply</p>
                       <p className="text-xs text-muted-foreground">May 22, 2023</p>
                     </div>
-                    <p className="font-medium text-red-600">-$89.57</p>
+                    <p className="font-medium text-red-600">-R89.57</p>
                   </div>
                   <div className="mt-2 flex justify-end">
                     <button className="text-primary-500 hover:text-primary-600 text-sm mr-2">Categorize</button>

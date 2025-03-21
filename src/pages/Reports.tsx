@@ -90,7 +90,6 @@ const Reports: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
-          {/* Report Navigation */}
           <div className="lg:col-span-1">
             <Card className="h-full">
               <CardHeader>
@@ -120,7 +119,6 @@ const Reports: React.FC = () => {
             </Card>
           </div>
           
-          {/* Report Content */}
           <div className="lg:col-span-3">
             <Card className="h-full">
               <CardHeader className="flex flex-row items-center justify-between">
@@ -141,9 +139,9 @@ const Reports: React.FC = () => {
                     >
                       <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f2f2f2" />
                       <XAxis dataKey="month" />
-                      <YAxis tickFormatter={(value) => `$${value / 1000}k`} />
+                      <YAxis tickFormatter={(value) => `R${value / 1000}k`} />
                       <Tooltip 
-                        formatter={(value) => [`$${value.toLocaleString()}`, undefined]}
+                        formatter={(value) => [`R${value.toLocaleString()}`, undefined]}
                         contentStyle={{ 
                           backgroundColor: 'white', 
                           border: 'none',
@@ -160,7 +158,6 @@ const Reports: React.FC = () => {
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Receivables Aging */}
                   <div>
                     <h3 className="text-base font-medium mb-4">Accounts Receivable Aging</h3>
                     <div className="h-60">
@@ -194,7 +191,6 @@ const Reports: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Expense Categories */}
                   <div>
                     <h3 className="text-base font-medium mb-4">Expense Breakdown</h3>
                     <div className="h-60">
@@ -233,7 +229,6 @@ const Reports: React.FC = () => {
           </div>
         </div>
         
-        {/* Additional Reports Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <Card>
             <CardHeader>
@@ -243,17 +238,17 @@ const Reports: React.FC = () => {
               <div className="space-y-4">
                 <div>
                   <p className="text-sm text-muted-foreground">Total Revenue</p>
-                  <p className="text-2xl font-bold">$106,000.00</p>
+                  <p className="text-2xl font-bold">R106,000.00</p>
                   <p className="text-xs text-green-600">↑ 18.5% from last year</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Total Expenses</p>
-                  <p className="text-2xl font-bold">$69,000.00</p>
+                  <p className="text-2xl font-bold">R69,000.00</p>
                   <p className="text-xs text-amber-600">↑ 12.3% from last year</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Net Profit</p>
-                  <p className="text-2xl font-bold">$37,000.00</p>
+                  <p className="text-2xl font-bold">R37,000.00</p>
                   <p className="text-xs text-green-600">↑ 22.7% from last year</p>
                 </div>
               </div>
@@ -268,11 +263,11 @@ const Reports: React.FC = () => {
               <div className="space-y-4">
                 <div>
                   <p className="text-sm text-muted-foreground">Sales Tax Collected</p>
-                  <p className="text-2xl font-bold">$8,475.00</p>
+                  <p className="text-2xl font-bold">R8,475.00</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Estimated Income Tax</p>
-                  <p className="text-2xl font-bold">$9,250.00</p>
+                  <p className="text-2xl font-bold">R9,250.00</p>
                 </div>
                 <div className="pt-2">
                   <p className="text-xs text-muted-foreground">Next Quarterly Payment Due</p>
@@ -340,3 +335,4 @@ const Reports: React.FC = () => {
 };
 
 export default Reports;
+
