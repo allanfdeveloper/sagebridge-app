@@ -20,7 +20,7 @@ const RecentTransactions: React.FC = () => {
       date: '2023-06-01',
       description: 'Airbnb Design Services',
       category: 'Income',
-      amount: '+$2,400.00',
+      amount: '+R2,400.00',
       type: 'income'
     },
     {
@@ -28,7 +28,7 @@ const RecentTransactions: React.FC = () => {
       date: '2023-05-30',
       description: 'Office Supplies',
       category: 'Expense',
-      amount: '-$350.00',
+      amount: '-R350.00',
       type: 'expense'
     },
     {
@@ -36,7 +36,7 @@ const RecentTransactions: React.FC = () => {
       date: '2023-05-28',
       description: 'Server Hosting',
       category: 'Expense',
-      amount: '-$120.00',
+      amount: '-R120.00',
       type: 'expense'
     },
     {
@@ -44,7 +44,7 @@ const RecentTransactions: React.FC = () => {
       date: '2023-05-25',
       description: 'Google Marketing Services',
       category: 'Income',
-      amount: '+$1,800.00',
+      amount: '+R1,800.00',
       type: 'income'
     },
     {
@@ -52,7 +52,7 @@ const RecentTransactions: React.FC = () => {
       date: '2023-05-23',
       description: 'Business Travel',
       category: 'Expense',
-      amount: '-$750.00',
+      amount: '-R750.00',
       type: 'expense'
     }
   ];

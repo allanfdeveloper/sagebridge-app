@@ -19,7 +19,7 @@ const UpcomingPayments: React.FC = () => {
       id: 'pay-1',
       dueDate: '2023-06-10',
       description: 'Office Rent Payment',
-      amount: '$3,500.00',
+      amount: 'R3,500.00',
       status: 'upcoming',
       daysRemaining: 5
     },
@@ -27,7 +27,7 @@ const UpcomingPayments: React.FC = () => {
       id: 'pay-2',
       dueDate: '2023-06-15',
       description: 'Software Subscription',
-      amount: '$120.00',
+      amount: 'R120.00',
       status: 'upcoming',
       daysRemaining: 10
     },
@@ -35,7 +35,7 @@ const UpcomingPayments: React.FC = () => {
       id: 'pay-3',
       dueDate: '2023-06-01',
       description: 'Utility Bills',
-      amount: '$350.00',
+      amount: 'R350.00',
       status: 'overdue',
       daysRemaining: -4
     },
@@ -43,7 +43,7 @@ const UpcomingPayments: React.FC = () => {
       id: 'pay-4',
       dueDate: '2023-06-20',
       description: 'Marketing Agency',
-      amount: '$1,200.00',
+      amount: 'R1,200.00',
       status: 'upcoming',
       daysRemaining: 15
     }

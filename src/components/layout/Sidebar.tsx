@@ -55,13 +55,13 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
             className="flex items-center gap-2"
           >
             <div className="w-8 h-8 rounded-md bg-white flex items-center justify-center">
-              <span className="text-sage-blue font-bold text-xl">S</span>
+              <span className="text-sage-blue font-bold text-xl">C</span>
             </div>
-            <span className="font-semibold text-white text-lg">SageBridge</span>
+            <span className="font-semibold text-white text-lg">Contas</span>
           </motion.div>
         ) : (
           <div className="w-8 h-8 rounded-md bg-white mx-auto flex items-center justify-center">
-            <span className="text-sage-blue font-bold text-xl">S</span>
+            <span className="text-sage-blue font-bold text-xl">C</span>
           </div>
         )}
       </div>
@@ -116,7 +116,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
           <Link to="/help" className={cn(
             "flex items-center h-10 rounded-md transition-all duration-200",
             "text-sidebar-foreground/70 hover:bg-sidebar-accent/50 hover:text-white",
-            collapsed ? "justify-center" : "px-3"
+            collapsed ? "justify-center px-0" : "px-3"
           )}>
             <HelpCircle className={cn("h-5 w-5", collapsed ? "" : "mr-3")} />
             {!collapsed && <span>Help & Support</span>}
@@ -125,7 +125,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
           <Link to="/logout" className={cn(
             "flex items-center h-10 rounded-md transition-all duration-200",
             "text-sidebar-foreground/70 hover:bg-sidebar-accent/50 hover:text-white",
-            collapsed ? "justify-center" : "px-3"
+            collapsed ? "justify-center px-0" : "px-3"
           )}>
             <LogOut className={cn("h-5 w-5", collapsed ? "" : "mr-3")} />
             {!collapsed && <span>Logout</span>}

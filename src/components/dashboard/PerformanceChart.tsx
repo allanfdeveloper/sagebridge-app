@@ -35,7 +35,7 @@ const PerformanceChart: React.FC = () => {
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f2f2f2" />
               <XAxis dataKey="name" tick={{ fontSize: 12 }} stroke="#888" />
               <YAxis 
-                tickFormatter={(value) => `$${value}`} 
+                tickFormatter={(value) => `R${value}`} 
                 tick={{ fontSize: 12 }} 
                 stroke="#888"
               />
@@ -46,7 +46,7 @@ const PerformanceChart: React.FC = () => {
                   border: 'none', 
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
                 }}
-                formatter={(value) => [`$${value}`, undefined]}
+                formatter={(value) => [`R${value}`, undefined]}
                 labelStyle={{ fontWeight: 'bold', marginBottom: '4px' }}
               />
               <Legend 

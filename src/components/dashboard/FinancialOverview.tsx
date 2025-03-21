@@ -57,25 +57,25 @@ const FinancialOverview: React.FC = () => {
   const stats = [
     { 
       title: "Total Cash Flow", 
-      value: "$24,378.00", 
+      value: "R24,378.00", 
       change: 12.5,
       icon: <DollarSign size={16} className="text-sage-blue" />
     },
     { 
       title: "Accounts Receivable", 
-      value: "$18,897.00", 
+      value: "R18,897.00", 
       change: -2.3,
       icon: <Users size={16} className="text-sage-blue" />
     },
     { 
       title: "Accounts Payable", 
-      value: "$8,234.00", 
+      value: "R8,234.00", 
       change: 4.7,
       icon: <ShoppingCart size={16} className="text-sage-blue" />
     },
     { 
       title: "Bank Balance", 
-      value: "$32,567.00", 
+      value: "R32,567.00", 
       change: 8.2,
       icon: <CreditCard size={16} className="text-sage-blue" />
     }
