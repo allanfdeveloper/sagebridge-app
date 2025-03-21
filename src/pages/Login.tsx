@@ -43,10 +43,10 @@ const Login: React.FC = () => {
       >
         <div className="flex justify-center">
           <div className="w-12 h-12 rounded-lg bg-sage-blue flex items-center justify-center shadow-lg">
-            <span className="text-white font-bold text-xl">S</span>
+            <span className="text-white font-bold text-xl">C</span>
           </div>
         </div>
-        <h2 className="mt-6 text-center text-2xl sm:text-3xl font-extrabold text-gray-900">SageBridge</h2>
+        <h2 className="mt-6 text-center text-2xl sm:text-3xl font-extrabold text-gray-900">Contas</h2>
         <p className="mt-2 text-center text-sm text-gray-600">
           Accounting software powered by ERPNext
         </p>
@@ -203,7 +203,7 @@ const Login: React.FC = () => {
           <div className={`${isMobile ? 'flex flex-col space-y-2' : 'grid grid-cols-2 gap-2'} text-sm`}>
             <div className="bg-white px-3 py-2 rounded">
               <span className="block text-xs text-gray-500">Email</span>
-              <span className="font-medium text-sage-darkBlue text-xs sm:text-sm">demo@sagebridge.com</span>
+              <span className="font-medium text-sage-darkBlue text-xs sm:text-sm">demo@contas.co.za</span>
             </div>
             <div className="bg-white px-3 py-2 rounded">
               <span className="block text-xs text-gray-500">Password</span>
