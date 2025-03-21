@@ -28,6 +28,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
     { name: 'Dashboard', icon: Home, path: '/' },
     { name: 'Sales', icon: ShoppingCart, path: '/sales' },
     { name: 'Purchases', icon: Package, path: '/purchases' },
+    { name: 'Customers', icon: Users, path: '/customers' },
     { name: 'Banking', icon: CreditCard, path: '/banking' },
     { name: 'Reports', icon: PieChart, path: '/reports' },
     { name: 'Settings', icon: Settings, path: '/settings' },
